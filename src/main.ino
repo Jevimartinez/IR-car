@@ -1,7 +1,7 @@
 #include <IRremote.hpp>
 #include <Servo.h>
 
-int IRLed = 11;
+int IRrecv = 11;
 int PinMotorLeft = 4;
 int PinMotorRight = 5;
 unsigned long MotorLeftTime = millis();
@@ -12,7 +12,7 @@ Servo ServoRCRight;
 
 void setup() {
   Serial.begin(9600);
-  IrReceiver.begin(IRLed, ENABLE_LED_FEEDBACK);
+  IrReceiver.begin(IRrecv, ENABLE_LED_FEEDBACK);
 
   pinMode(PinMotorLeft, OUTPUT);
   pinMode(PinMotorRight, OUTPUT);
